@@ -1,0 +1,14 @@
+
+
+TARGET1_CFLAGS		:= \
+		   	-Werror -Wno-psabi \
+		   	-Wall -Wno-attributes -Wno-write-strings \
+		   	-Wformat-security \
+		  	-c -fno-omit-frame-pointer -pipe \
+		   	-feliminate-unused-debug-types \
+		   	-ffunction-sections -fdata-sections -fno-exceptions -std=c++17
+
+all: test2
+
+test2:
+	@echo "I'm here in Makefile.common"

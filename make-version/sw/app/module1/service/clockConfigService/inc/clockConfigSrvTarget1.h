@@ -1,0 +1,1 @@
+//Declare APIs in ClockConfigSrvIf
