@@ -22,10 +22,19 @@ include $(APP_DIR)/main/Makefile
 #include $(APP_DIR)/module4/Makefile
 #include $(APP_DIR)/module5/Makefile
 
-all: test
+# --------------------------------------------------
+# Call Makefiles for creating ELF file
+# --------------------------------------------------
+include Makefile.targets
 
-test:
-	@echo "sw/make/Makefile: Compilation for $(TARGET)done!!!"
+
+all: rootMakefile
+
+rootMakefile:
+	@echo "sw/make/Makefile: Compilation for $(TARGET_PLF1_GEN2) done!!! [OK]"
 
 clean:
 	$(RMV) $(BIN_DIR)
+
+run:
+	@$(BIN_DIR)/plf1_gen2.elf

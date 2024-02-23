@@ -6,15 +6,15 @@
 
 int main(void)
 {
-        std::cout << "Starting main process..." << std::endl;
+        std::cout << "INFO:\t" << __FILE__ << ":" << __LINE__ << "\t\tmsg = \"Starting main process...\"" << std::endl;
 
         StartUp::StartUpIf::getInstance()->startUpAllInternalSubModules();
 
-        std::cout << "Starting module1 done!" << std::endl;
+        std::cout << "INFO:\t" << __FILE__ << ":" << __LINE__ << "\t\tmsg = \"Starting module1 done!\"" << std::endl;
 
         StartUp::StartUpIf::getInstance()->destroyAllInternalSubModules();
 
-        std::cout << "Destroying module1 done!" << std::endl;
+        std::cout << "INFO:\t" << __FILE__ << ":" << __LINE__ << "\t\tmsg = \"Destroying module1 done!\"" << std::endl;
 
-        return 1;
+        return 0;
 }

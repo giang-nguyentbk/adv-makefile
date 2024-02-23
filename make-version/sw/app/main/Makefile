@@ -20,6 +20,6 @@ all: $(MAIN_TARGET1_OBJS)
 $(BIN_DIR)/main/%.o: $(APP_DIR)/main/%.cc
 	@mkdir -p $(@D)
 	@D_FILE=$(@:.o=.o.d); \
-	cd $(<D); echo " Compiling for $(TARGET) -> $<"; \
+	cd $(<D); echo " Compiling for $(TARGET_PLF1_GEN2) -> $<"; \
 	$(TARGET1_CXX) $(TARGET1_CFLAGS) $(MAIN_INCLUDE) -MF$$D_FILE -MMD $(<F) -o $@ && \
 	$(DEPENDENCIES_MAP_FIXING);

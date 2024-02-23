@@ -4,6 +4,7 @@ namespace StartUp
 {
 
 static StartUpIf* pStartUpInstance = nullptr;
+static Module1::StartUp* module1StartUpPtr = nullptr;
 
 StartUpIf* StartUpIf::getInstance()
 {
@@ -15,7 +16,7 @@ StartUpIf* StartUpIf::getInstance()
         return pStartUpInstance;
 }
 
-void StartUpImpl::startUpAllInternalSubModules()
+void StartUpIf::startUpAllInternalSubModules()
 {
         if(module1StartUpPtr == nullptr)
         {
@@ -30,7 +31,7 @@ void StartUpImpl::startUpAllInternalSubModules()
         }
 }
 
-void StartUpImpl::destroyAllInternalSubModules()
+void StartUpIf::destroyAllInternalSubModules()
 {
         if(module1StartUpPtr != nullptr)
         {

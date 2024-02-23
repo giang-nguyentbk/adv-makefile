@@ -1,0 +1,9 @@
+all: $(BIN_DIR)/plf1_gen2.elf
+
+# Create Target 1 ELF file
+$(BIN_DIR)/plf1_gen2.elf: $(TARGET1_OBJS)
+	@echo "--------- Linking to create $@"
+	@echo "--------- Linking ($(notdir $(@F))) $(<F)"
+	$(TARGET1_CXX) $(filter-out -c,$(TARGET1_CFLAGS)) -o $@ \
+	-Wl,--as-needed -Wl,--gc-sections -Wl,-Os -Wl,-Map,$(BIN_DIR)/plf1_gen2.map \
+	$(TARGET1_OBJS)

@@ -10,11 +10,6 @@ class StartUpImpl : public StartUpIf
 {
 public:
         static StartUpImpl* getInstance();
-        static void startUpAllInternalSubModules();
-        static void destroyAllInternalSubModules();
-
-private:
-        static Module1::StartUp* module1StartUpPtr;
 
 }; // class StartUpImpl
 

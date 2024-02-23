@@ -8,7 +8,7 @@ namespace Module1
 
 bool StartUp::init()
 {
-        std::cout << "Module1::StartUp starting..." << std::endl;
+        std::cout << "INFO:\t" << __FILE__ << ":" << __LINE__ << "\tmsg = \"Module1::StartUp starting...\"" << std::endl;
         return true;
 }
 

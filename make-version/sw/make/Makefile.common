@@ -8,7 +8,7 @@ TARGET1_CFLAGS		:= \
 		   	-feliminate-unused-debug-types \
 		   	-ffunction-sections -fdata-sections -fno-exceptions -std=c++17
 
-all: test2
+all: common_Makefile
 
-test2:
-	@echo "sw/make/Makefile.common: Done!!!"
+common_Makefile:
+	@echo "sw/make/Makefile.common: Done!!! [OK]"
