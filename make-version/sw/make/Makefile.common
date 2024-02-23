@@ -11,4 +11,4 @@ TARGET1_CFLAGS		:= \
 all: test2
 
 test2:
-	@echo "I'm here in Makefile.common"
+	@echo "sw/make/Makefile.common: Done!!!"

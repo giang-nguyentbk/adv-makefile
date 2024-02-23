@@ -30,7 +30,8 @@ MODULE1_INCLUDE		:= \
 			-I$(APP_DIR)/module1/serviceControl/module1TimingPhaseCtrl/inc \
 			-I$(APP_DIR)/module1/startUp/inc \
 			-I$(APP_DIR)/module1/utilities/cmdHandler/inc \
-			-I$(APP_DIR)/module1/utilities/helpers/inc
+			-I$(APP_DIR)/module1/utilities/helpers/inc \
+			-I$(APP_DIR)/commonUtils/inc	# Need nonCopyable.h for module1StartUp.h
 #                       -I$(APP_DIR)/module3/drv/if \#
 #                       -I$(APP_DIR)/module3/drv/inc \#
 
@@ -41,7 +42,7 @@ all: $(MODULE1_TARGET1_OBJS)
 $(BIN_DIR)/module1/%.o: $(APP_DIR)/module1/%.cc
 	@mkdir -p $(@D)
 	@D_FILE=$(@:.o=.o.d); \
-	cd $(<D); echo " Compiling (Target 1) $<"; \
+	cd $(<D); echo " Compiling for $(TARGET) -> $<"; \
 	$(TARGET1_CXX) $(TARGET1_CFLAGS) $(MODULE1_INCLUDE) -MF$$D_FILE -MMD $(<F) -o $@ && \
 	$(DEPENDENCIES_MAP_FIXING);
 

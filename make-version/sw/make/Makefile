@@ -15,6 +15,8 @@ include Makefile.common
 # Call Makefiles for modules of the project
 # --------------------------------------------------
 include $(APP_DIR)/module1/Makefile
+include $(APP_DIR)/startUp/Makefile
+include $(APP_DIR)/main/Makefile
 #include $(APP_DIR)/module2/Makefile
 #include $(APP_DIR)/module3/Makefile
 #include $(APP_DIR)/module4/Makefile
@@ -23,7 +25,7 @@ include $(APP_DIR)/module1/Makefile
 all: test
 
 test:
-	@echo "sw/make/Makefile: Compiling done!!!"
+	@echo "sw/make/Makefile: Compilation for $(TARGET)done!!!"
 
 clean:
 	$(RMV) $(BIN_DIR)

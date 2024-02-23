@@ -1,0 +1,1 @@
+STARTUP_COMMON_FILES +=	startUp/src/startUpImpl.cc
