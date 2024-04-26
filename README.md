@@ -20,11 +20,8 @@ First, let's see what is the software architecture:
 	+ Makefile: this is main Makefile which will be run by command line "make" to build the entire sources. What it will do?
 		
 		a. First get the root directory ROOT_DIR (top of repository) by command line "git rev-parse --show-toplevel".
-		
 		b. Use "include" to invoke utility Makefiles such as Makefile.config, Makefile.common,... for initial configuration and building databases,...
-		
 		c. Use "include" to invoke all sub-Makefile placed in sub-modules which will also call its child sub-Makefiles recursively. After all sub-Makefiles are run, object files that has been built will be produced.
-		
 		d. Use "include" to invoke Makefile.targets that builds a respective executable file based on which build target is specified.
 
 	+ Makefile.config: Based on ROOT_DIR, define all other necessary paths such as: SW_DIR, APP_DIR, BIN_DIR, OBJ_DIR,...

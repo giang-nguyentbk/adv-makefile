@@ -1,3 +1,12 @@
+^.*
+*$
 *.o
 *.o.d
-./make-version/sw/bin/*
+*/bin/*
+!.gitignore
+!*.cc
+!*.c
+!*.h
+!*.md
+!*.am
+!*.ac
